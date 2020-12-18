@@ -7,7 +7,7 @@ import './Card.css';
 
 export function Card({ picture }) {
     const { state, dispatch } = useContext(ApplicationContext);
-    const userLiked = picture.likedBy && picture.likedBy.find(like => like === state.user._id)
+    const userLiked = picture.likedBy && picture.likedBy.find(like => like._id === state.user._id)
 
     const onLike = (pictureId) => {
         LikePictureById(dispatch, pictureId)
