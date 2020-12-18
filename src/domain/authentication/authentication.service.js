@@ -4,12 +4,12 @@ export function checkIfCookieExist() {
 
 export function register(data) {
     return fetch(`/api/register/`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
         .then(async res => {
             if (res.status !== 200 && res.status !== 201) {
                 const { message } = await res.json()
@@ -22,12 +22,12 @@ export function register(data) {
 
 export function login(data) {
     return fetch(`/api/login/`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
         .then(async res => {
             if (res.status !== 200 && res.status !== 201) {
                 const { message } = await res.json()
